@@ -1,13 +1,11 @@
-{% set title = 'Dashboard' %}
-{% set filename = 'index.html' %}
-
-{% extends 'src/layouts/master.html' %}
-
-{% block styles %}
-<link rel="stylesheet" href="/assets/scss/iconly.scss">
-{% endblock %}
-
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="assets/static/css/app.css"> <!-- or use CDN -->
+</head>
+<body>
 <div class="page-heading">
     <h3>Profile Statistics</h3>
 </div> 
@@ -338,9 +336,6 @@ fetch("src/assets/static/data.json")
   })
   .catch(error => console.error("Error loading data:", error));
 </script>
-{% endblock %}
-{% block js %}
-<!-- Need: Apexcharts -->
-<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="assets/static/js/pages/dashboard.js"></script>
-{% endblock %}
+
+</body>
+</html>
