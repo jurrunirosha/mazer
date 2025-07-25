@@ -316,6 +316,28 @@
         </div>
     </section>
 </div>
+<div class="card mt-4">
+  <div class="card-header">
+    <h4>User Activity Summary</h4>
+  </div>
+  <div class="card-body">
+    <ul id="userList" class="list-group"></ul>
+  </div>
+</div>
+<script>
+fetch("assets/static/data.json")
+  .then(response => response.json())
+  .then(data => {
+    const list = document.getElementById("userList");
+    data.users.forEach(user => {
+      const item = document.createElement("li");
+      item.className = "list-group-item";
+      item.innerHTML = `<strong>${user.name}</strong> (${user.role}): ${user.activity}`;
+      list.appendChild(item);
+    });
+  })
+  .catch(error => console.error("Error loading data:", error));
+</script>
 {% endblock %}
 {% block js %}
 <!-- Need: Apexcharts -->

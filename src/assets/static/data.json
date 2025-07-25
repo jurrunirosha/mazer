@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "name": "Nirosha", "role": "Admin", "activity": "5 Tasks Pending" },
+    { "name": "Ravi", "role": "Editor", "activity": "2 Reports Reviewed" },
+    { "name": "Anjali", "role": "Viewer", "activity": "No Activity Today" }
+  ]
+}
